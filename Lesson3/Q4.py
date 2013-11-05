@@ -1,3 +1,4 @@
+
 # Define a procedure, total_enrollment,
 # that takes as an input a list of elements,
 # where each element is a list containing
@@ -27,10 +28,9 @@ usa_univs = [ ['California Institute of Technology',2175,37704],
 def total_enrollment(school_list):
     students = 0
     tuition = 0
-    i = 0
     for e in school_list: 
-        students = int(school_list[1]) + students
-        tuition = int(school_list[0]) * int(school_list[2]) + tuition
+        students = int(e[1]) + students
+        tuition = int(e[1]) * int(e[2]) + tuition
 
         
     return students, tuition
