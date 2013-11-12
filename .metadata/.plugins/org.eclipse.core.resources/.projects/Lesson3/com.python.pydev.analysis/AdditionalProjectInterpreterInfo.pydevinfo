@@ -1,0 +1,42 @@
+-- VERSION_3
+-- START DISKCACHE
+/Users/annali/Desktop/Udacity/.metadata/.plugins/org.eclipse.core.resources/.projects/Lesson3/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+__init__|0|/Users/annali/Desktop/Udacity/Lesson3/__init__.py
+webcrawlerStoreLinks|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerStoreLinks.py
+webcrawlerFollowLinks|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerFollowLinks.py
+L3Q3|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q3.py
+webcrawlerStoreLinks2|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerStoreLinks2.py
+webcrawlerPrint|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerPrint.py
+L3Q5|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q5.py
+L3Q4|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q4.py
+L3Q7|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q7.py
+L3Q6|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q6.py
+-- END DISKCACHE
+-- START DICTIONARY
+9
+4=webcrawlerStoreLinks
+6=webcrawlerFollowLinks
+8=L3Q3
+5=webcrawlerPrint
+1=webcrawlerStoreLinks2
+9=L3Q5
+7=L3Q4
+3=L3Q7
+2=L3Q6
+-- END DICTIONARY
+-- START TREE 1
+9
+cra|4|crawl_web!10@crawl_web!18@crawl_web!26@crawl_web!34@
+get|14|get_all_links!34@get_page!26@get_page!18@get_next_target!34@get_next_target!10@get_next_target!26@get_all_links!10@get_all_links!26@get_page!10@get_next_target!18@get_next_target!42@get_all_links!50@get_all_links!18@get_next_target!50@
+gre|1|greatest!58@
+pri|1|print_all_links!42@
+pro|1|product_list!66@
+tot|1|total_enrollment!74@
+uda|1|udacious_univs!75@
+uni|3|union!10@union!18@union!26@
+usa|1|usa_univs!75@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
