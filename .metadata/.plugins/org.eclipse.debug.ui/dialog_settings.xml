@@ -5,6 +5,13 @@
 		<item value="352" key="DIALOG_HEIGHT"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
+	<section name="org.eclipse.debug.ui.STRING_VARIABLE_SELECTION_DIALOG_SECTION">
+		<item value="382" key="DIALOG_WIDTH"/>
+		<item value="-34" key="DIALOG_Y_ORIGIN"/>
+		<item value="538" key="DIALOG_HEIGHT"/>
+		<item value="144" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="org.eclipse.debug.ui.SELECT_LAUNCH_SHORTCUT_DIALOG">
 		<item value="253" key="DIALOG_WIDTH"/>
 		<item value="416" key="DIALOG_HEIGHT"/>
