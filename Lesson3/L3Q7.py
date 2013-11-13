@@ -118,17 +118,17 @@ Then return all the links
 
 
 def crawl_web(seed,max_depth):
+    depth = 0
     tocrawl = [seed]
     crawled = []
-    depth = 0
+
     while tocrawl:
         page = tocrawl.pop()
         if page not in crawled:
-            if depth <= max_depth:
-                for e in tocrawl:
-                    union(tocrawl, get_all_links(get_page(page)))
-                    crawled.append(page)
-                    depth = e
+            #crawls the links on page and if not already in crawled, adds to 
+            union(tocrawl, get_all_links(get_page(page)))
+            crawled.append(page)
+            depth += 1
     return crawled
 
 
