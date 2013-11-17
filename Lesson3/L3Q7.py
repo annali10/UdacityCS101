@@ -91,10 +91,10 @@ def get_next_target(page):
     url = page[start_quote + 1:end_quote]
     return url, end_quote
 
-def union(p,q):
+def union(p,q,d):
     for e in q:
         if e not in p:
-            p.append(e)
+            p.append([e, d])
 
 def get_all_links(page):
     links = []
@@ -117,23 +117,20 @@ Then return all the links
 '''
 
 
-def crawl_web(seed,max_depth):
-    depth = 0
-    tocrawl = [seed]
+def crawl_web(seed,max_pages):
+    depth = 0 # depth starts at 0 aka seed page
+    tocrawl = [seed, depth]
     crawled = []
 
     while tocrawl:
         page = tocrawl.pop()
-        if page not in crawled:
-            if depth <= max_depth:
-                #crawls the links on page and if not already in crawled, adds to 
-                union(tocrawl, get_all_links(get_page(page)))
+        page_depth = page[1]
+        if page_depth <= max_pages:
+            if page[0] not in crawled:
+                union(tocrawl, get_all_links(get_page(page)), depth)
                 crawled.append(page)
                 depth += 1
-            for e in tocrawl:    
-                union(crawled,tocrawl)
     return crawled
-
 
 print crawl_web("http://www.udacity.com/cs101x/index.html",0)
 #>>> ['http://www.udacity.com/cs101x/index.html']
