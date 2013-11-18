@@ -124,7 +124,7 @@ def crawl_web(seed,max_depth):
 
     while tocrawl:
         url,page_depth = tocrawl[0]
-        tocrawl = tocrawl[0:]
+        tocrawl = tocrawl[1:]
         if page_depth <= max_depth:
             if url not in crawled:
                 union(tocrawl, get_all_links(get_page(url)), page_depth + 1)
