@@ -1,0 +1,11 @@
+myName = ['a','n','l','i']
+
+def addConcat(myName):
+    myName = myName + ['x']
+    
+def addApp(myName):
+    myName.append('x')
+    
+print myName
+print addConcat(myName)
+

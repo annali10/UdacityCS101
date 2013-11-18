@@ -2,40 +2,56 @@
 -- START DISKCACHE
 /Users/annali/Desktop/Udacity/.metadata/.plugins/org.eclipse.core.resources/.projects/Lesson3/com.python.pydev.analysis/v1_indexcache
 .v1_indexcache
-__init__|0|/Users/annali/Desktop/Udacity/Lesson3/__init__.py
-webcrawlerStoreLinks|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerStoreLinks.py
-webcrawlerFollowLinks|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerFollowLinks.py
 L3Q3|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q3.py
-webcrawlerStoreLinks2|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerStoreLinks2.py
 webcrawlerPrint|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerPrint.py
 L3Q5|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q5.py
 L3Q4|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q4.py
 L3Q7|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q7.py
 L3Q6|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q6.py
+L3Q8|0|/Users/annali/Desktop/Udacity/Lesson3/L3Q8.py
+__init__|0|/Users/annali/Desktop/Udacity/Lesson3/__init__.py
+webcrawlerStoreLinks|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerStoreLinks.py
+webcrawlerFollowLinks|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerFollowLinks.py
+L3OQ1|0|/Users/annali/Desktop/Udacity/Lesson3/L3OQ1.py
+webcrawlerStoreLinks2|0|/Users/annali/Desktop/Udacity/Lesson3/webcrawlerStoreLinks2.py
+Experiment|0|/Users/annali/Desktop/Udacity/Lesson3/Experiment.py
 -- END DISKCACHE
 -- START DICTIONARY
-9
-4=webcrawlerStoreLinks
-6=webcrawlerFollowLinks
-8=L3Q3
-5=webcrawlerPrint
-1=webcrawlerStoreLinks2
-9=L3Q5
-7=L3Q4
-3=L3Q7
-2=L3Q6
+12
+6=webcrawlerStoreLinks
+9=webcrawlerFollowLinks
+11=L3Q3
+8=webcrawlerPrint
+7=L3OQ1
+3=webcrawlerStoreLinks2
+12=L3Q5
+10=L3Q4
+5=L3Q7
+4=L3Q6
+2=L3Q8
+1=Experiment
 -- END DICTIONARY
 -- START TREE 1
-9
-cra|4|crawl_web!10@crawl_web!18@crawl_web!26@crawl_web!34@
-get|14|get_all_links!34@get_page!26@get_page!18@get_next_target!34@get_next_target!10@get_next_target!26@get_all_links!10@get_all_links!26@get_page!10@get_next_target!18@get_next_target!42@get_all_links!50@get_all_links!18@get_next_target!50@
-gre|1|greatest!58@
-pri|1|print_all_links!42@
-pro|1|product_list!66@
-tot|1|total_enrollment!74@
-uda|1|udacious_univs!75@
-uni|3|union!10@union!18@union!26@
-usa|1|usa_univs!75@
+19
+add|2|addApp!10@addConcat!10@
+che|2|checkrow!18@check_sudoku!18@
+cor|1|correct!19@
+cra|4|crawl_web!26@crawl_web!34@crawl_web!42@crawl_web!50@
+fir|1|first_input!59@
+get|14|get_all_links!50@get_page!42@get_page!34@get_next_target!50@get_next_target!26@get_next_target!42@get_all_links!26@get_all_links!42@get_page!26@get_next_target!34@get_next_target!66@get_all_links!74@get_all_links!34@get_next_target!74@
+gre|1|greatest!82@
+inc|5|incorrect!19@incorrect3!19@incorrect5!19@incorrect2!19@incorrect4!19@
+lis|4|list3!59@list1!59@list_test!58@list2!59@
+myn|1|myName!11@
+pri|1|print_all_links!66@
+pro|4|proc3!58@proc2!58@proc!58@product_list!90@
+sec|1|second_input!59@
+sum|1|sumrow!18@
+thi|1|third_input!59@
+tot|1|total_enrollment!98@
+uda|1|udacious_univs!99@
+uni|3|union!26@union!34@union!42@
+usa|1|usa_univs!99@
 -- END TREE
 -- START TREE 2
 0
