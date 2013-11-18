@@ -123,30 +123,31 @@ def crawl_web(seed,max_depth):
     crawled = []
 
     while tocrawl:
-        url,page_depth = tocrawl.pop()
+        url,page_depth = tocrawl[0]
+        tocrawl = tocrawl[0:]
         if page_depth <= max_depth:
             if url not in crawled:
                 union(tocrawl, get_all_links(get_page(url)), page_depth + 1)
                 crawled.append(url)
     return crawled
 
-#print crawl_web("http://www.udacity.com/cs101x/index.html",0)
+print crawl_web("http://www.udacity.com/cs101x/index.html",0)
 #>>> ['http://www.udacity.com/cs101x/index.html']
 
-#print crawl_web("http://www.udacity.com/cs101x/index.html",1)
+print crawl_web("http://www.udacity.com/cs101x/index.html",1)
 #>>> ['http://www.udacity.com/cs101x/index.html',
 #>>> 'http://www.udacity.com/cs101x/flying.html',
 #>>> 'http://www.udacity.com/cs101x/walking.html',
 #>>> 'http://www.udacity.com/cs101x/crawling.html']
 
-#print crawl_web("http://www.udacity.com/cs101x/index.html",50)
+print crawl_web("http://www.udacity.com/cs101x/index.html",50)
 #>>> ['http://www.udacity.com/cs101x/index.html',
 #>>> 'http://www.udacity.com/cs101x/flying.html',
 #>>> 'http://www.udacity.com/cs101x/walking.html',
 #>>> 'http://www.udacity.com/cs101x/crawling.html',
 #>>> 'http://www.udacity.com/cs101x/kicking.html']
 
-#print crawl_web("http://top.contributors/forbiddenvoid.html",2)
+print crawl_web("http://top.contributors/forbiddenvoid.html",2)
 #>>> ['http://top.contributors/forbiddenvoid.html',
 #>>> 'http://top.contributors/graemeblake.html',
 #>>> 'http://top.contributors/angel.html',
