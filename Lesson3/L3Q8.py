@@ -56,43 +56,81 @@ incorrect5 = [ [1, 1.5],
                [1.5, 1]]
                
 def check_sudoku(square):
-    numRowCol = len(square[0])
-    sum = (numRowCol * (numRowCol + 1))/2
-    if checkRow(square, numRowCol, sum):
-        
-    if checkCol(square, numRowCol):
+    numOfDig = len(square[0])
+    sum = (numOfDig * (numOfDig + 1))/2
+    if checkAllRow(square, numOfDig, sum):
+        return checkAllCol(square, numOfDig, sum)
     
     
     return False    
     
-            '''
-            series of checks:
-            check length
+'''
+            Pseudo Code
+            series of checks to check Row:
+            grab one list from Sudoku Square (contains 1 row)
+            check length of each row
             check for duplicates? (check sum)
             use counter to check each digit
             
-            '''
-def checkRow(sudokuList, numOfDig, sum):
-    for row in sudokuList:  //row is a list containing digits
-        if len(row) != numOfDig: 
+'''
+def checkAllRow(square, numOfDig, sumAllDig):
+    for row in square:  #row is a list containing digits
+        checkRow(row, numOfDig, sumAllDig)
+        
+def checkRow(rowList, numOfDig, sumAllDig):
+    
+        if len(rowList) != numOfDig: 
             return False
-        elif 
-            for digit in square
+        
+        # compares sum of digits in one row to sum should be found
+        if sumAllDig != sumOneRow(rowList): 
+            return False
+        
+        checkEachDigitOneRow(rowList, numOfDig)
     
-    checkOneRow(sudokuList, num)
+def sumOneRow(oneRow): 
+    sum = 0   
+    for digit in oneRow: 
+        sum += digit
+    return sum
+        
     
-def checkOneRow(sudokuList, num):    
-    
-    
-    
-def checkCol(sudokuList, num):
+def checkEachDigitOneRow(oneRow, numOfDig):
+    index = 1
+    while index <= numOfDig: 
+        if index not in oneRow:
+            return False
+    return True
+
+''' 
+        Pseudo Code
+        series of checks to check Column: 
+        Trick accessing same col in each row 
+        Create list with numbers gathered
+        Run same check row code
+        
+'''
+
+
+def checkAllCol(square, numOfDig, sumAllDig):
+    index = 0
+    while index < numOfDig:
+        column = [] 
+        for row in square:
+            column.append(row[index])
+        if checkRow(column, numOfDig, sumAllDig): 
+            index += 1 
+        else: 
+            return False    
+    return True         
+        
     
         
     
-#print check_sudoku(incorrect)
+print check_sudoku(incorrect)
 #>>> False
 
-#print check_sudoku(correct)
+print check_sudoku(correct)
 #>>> True
 
 #print check_sudoku(incorrect2)
