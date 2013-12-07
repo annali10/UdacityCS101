@@ -56,17 +56,14 @@ incorrect5 = [ [1, 1.5],
                [1.5, 1]]
                
 def check_sudoku(square):
-    n = len(square[0])
-    checkrow(square, n)
+            '''
+            series of checks:
+            check length
+            use counter to check each digit
+            check for duplicates? (check sum)
             
-            
+            '''
 
-def sumrow(length):
-    return (length * (length + 1)) /2 
-
-def checkrow(sq, leng):
-
-    
     
 #print check_sudoku(incorrect)
 #>>> False
