@@ -32,6 +32,7 @@ correct = [[1,2,3],
            [2,3,1],
            [3,1,2]]
 
+
 incorrect = [[1,2,3,4],
              [2,3,1,3],
              [3,1,2,3],
@@ -54,16 +55,16 @@ incorrect4 = [['a','b','c'],
 
 incorrect5 = [ [1, 1.5],
                [1.5, 1]]
+
                
 def check_sudoku(square):
     numOfDig = len(square[0])
-    
     sum = (numOfDig * (numOfDig + 1))/2
     if checkAllRow(square, numOfDig, sum):
-        return checkAllCol(square, numOfDig, sum)
-    
-    
-    return False    
+        if checkAllCol(square, numOfDig, sum):
+            return True
+    else:
+        return False    
     
 '''
             Pseudo Code
@@ -76,7 +77,9 @@ def check_sudoku(square):
 '''
 def checkAllRow(square, numOfDig, sumAllDig):
     for row in square:  #row is a list containing digits
-        checkRow(row, numOfDig, sumAllDig)
+        if not checkRow(row, numOfDig, sumAllDig):
+            return False
+    return True 
         
 def checkRow(rowList, numOfDig, sumAllDig):
     
@@ -87,20 +90,27 @@ def checkRow(rowList, numOfDig, sumAllDig):
         if sumAllDig != calcSumOneRow(rowList): 
             return False
         
-        checkEachDigitOneRow(rowList, numOfDig)
+        if not checkEachDigitOneRow(rowList, numOfDig):
+            return False
+        else: 
+            return True
     
 def calcSumOneRow(oneRow): 
     sum = 0   
     for digit in oneRow: 
-        sum += digit
+        if not isinstance(digit, int):
+            return False
+        else:    
+            sum += digit
     return sum
         
     
 def checkEachDigitOneRow(oneRow, numOfDig):
     index = 1
-    while index <= numOfDig: 
+    while index <= numOfDig:
         if index not in oneRow:
             return False
+        index += 1
     return True
 
 ''' 
@@ -125,14 +135,13 @@ def checkAllCol(square, numOfDig, sumAllDig):
             return False    
     return True         
         
-    
-'''    
-    
-print check_sudoku(incorrect)
-#>>> False
+
 
 print check_sudoku(correct)
 #>>> True
+
+print check_sudoku(incorrect)
+#>>> False
 
 print check_sudoku(incorrect2)
 #>>> False
@@ -140,10 +149,9 @@ print check_sudoku(incorrect2)
 print check_sudoku(incorrect3)
 #>>> False
 
-#print check_sudoku(incorrect4)
+print check_sudoku(incorrect4)
 #>>> False
 
-#print check_sudoku(incorrect5)
+print check_sudoku(incorrect5)
 #>>> False
 
-'''
