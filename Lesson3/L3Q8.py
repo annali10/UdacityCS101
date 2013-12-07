@@ -57,6 +57,7 @@ incorrect5 = [ [1, 1.5],
                
 def check_sudoku(square):
     numOfDig = len(square[0])
+    
     sum = (numOfDig * (numOfDig + 1))/2
     if checkAllRow(square, numOfDig, sum):
         return checkAllCol(square, numOfDig, sum)
@@ -83,12 +84,12 @@ def checkRow(rowList, numOfDig, sumAllDig):
             return False
         
         # compares sum of digits in one row to sum should be found
-        if sumAllDig != sumOneRow(rowList): 
+        if sumAllDig != calcSumOneRow(rowList): 
             return False
         
         checkEachDigitOneRow(rowList, numOfDig)
     
-def sumOneRow(oneRow): 
+def calcSumOneRow(oneRow): 
     sum = 0   
     for digit in oneRow: 
         sum += digit
@@ -125,7 +126,7 @@ def checkAllCol(square, numOfDig, sumAllDig):
     return True         
         
     
-        
+'''    
     
 print check_sudoku(incorrect)
 #>>> False
@@ -133,10 +134,10 @@ print check_sudoku(incorrect)
 print check_sudoku(correct)
 #>>> True
 
-#print check_sudoku(incorrect2)
+print check_sudoku(incorrect2)
 #>>> False
 
-#print check_sudoku(incorrect3)
+print check_sudoku(incorrect3)
 #>>> False
 
 #print check_sudoku(incorrect4)
@@ -145,4 +146,4 @@ print check_sudoku(correct)
 #print check_sudoku(incorrect5)
 #>>> False
 
-
+'''
