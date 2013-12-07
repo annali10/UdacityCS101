@@ -56,14 +56,38 @@ incorrect5 = [ [1, 1.5],
                [1.5, 1]]
                
 def check_sudoku(square):
+    numRowCol = len(square[0])
+    sum = (numRowCol * (numRowCol + 1))/2
+    if checkRow(square, numRowCol, sum):
+        
+    if checkCol(square, numRowCol):
+    
+    
+    return False    
+    
             '''
             series of checks:
             check length
-            use counter to check each digit
             check for duplicates? (check sum)
+            use counter to check each digit
             
             '''
-
+def checkRow(sudokuList, numOfDig, sum):
+    for row in sudokuList:  //row is a list containing digits
+        if len(row) != numOfDig: 
+            return False
+        elif 
+            for digit in square
+    
+    checkOneRow(sudokuList, num)
+    
+def checkOneRow(sudokuList, num):    
+    
+    
+    
+def checkCol(sudokuList, num):
+    
+        
     
 #print check_sudoku(incorrect)
 #>>> False
