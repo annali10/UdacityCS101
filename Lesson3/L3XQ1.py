@@ -12,7 +12,6 @@ list2.append(5)
 
 print list1
 print list2
-print '***'
 
 # What is the difference between these two pieces of code?
 # Append takes the original list object and adds the additional list item on the end
@@ -30,8 +29,8 @@ def proc2(mylist):
 # the hashes # and run the code to check.
 # proc method concatenates so it creates a new object, mylist (on left), but
 # when that's printed out, it still prints the original object mylist (on right)
-# basically mylist is reference is passed in proc2 whereas mylist is immutable so
-# proc makes a new list?
+# proc2 appends int 6 to the end of original mylist object and changes object
+# directly
 
 print list1
 proc(list1)
@@ -50,10 +49,18 @@ list3 += [5]
 # procedure, proc3 similar to proc and proc2, but for +=. When you've done
 # that check your conclusion using the print-procedure call-print code as
 # above.
+# It behaves like an append even though the syntax looks more like concatenation
+# but it actually acts more like a plus because when adding other lists, they become
+# items added to the end of the list instead of a list within a list (because += indicates
+# the item should be added to the same object)
 
 def proc3(mylist):
-    mylist += [5]
+    mylist += [6]
     
+print list3
+proc3(list3)
+print list3
+
 # What happens when you try:
 
 print '***'
@@ -70,10 +77,13 @@ print list3
 # second to include the entries 'a', 'b', 'c' and finally the last list should
 # not be mutated but a copy should be returned with the additional entry 'w'.
 
+print 'Exercise begins'
+
 def list_test(l1,l2,l3):
     l1.append('a')
     l2 += ['a','b','c']
-    return l3.append('w')
+    l3 = l3 + ['w']
+    return l3
 
 
 first_input = [1,2,3]
