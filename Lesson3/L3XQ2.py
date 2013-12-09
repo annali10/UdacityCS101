@@ -16,7 +16,6 @@ etc.
 
 
 def symmetric(puzzle):
-    num = len(puzzle) # max times runs thru loops (num of items in one row)
     i = 0
     for row in puzzle: # one row in puzzle
         col = getCol(puzzle, i)
