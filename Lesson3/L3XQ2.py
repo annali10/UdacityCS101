@@ -21,7 +21,7 @@ def symmetric(puzzle):
     for row in puzzle: # one row in puzzle
         col = getCol(puzzle, i)
         newRow = row[i:]
-        newCol = col[1:]
+        newCol = col[i:]
         if newRow != newCol:
             return False
         else:
@@ -59,6 +59,6 @@ print symmetric([[1, 2, 3, 4],
                 [3, 4, 5, 6]])
 #>>> False
 
-#print symmetric([[1,2,3],
-#                 [2,3,1]])
+print symmetric([[1,2,3],
+                 [2,3,1]])
 #>>> False
