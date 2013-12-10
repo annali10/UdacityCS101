@@ -11,14 +11,24 @@
 #Hint - "int()" turns a string's element into a number
 
 def numbers_in_lists(string):
-    list = []
     firstNum = int(string[0])
-    i = 0 
+    nLarge = True
+    list = [firstNum]
+    sub = []
+    i = 1 
     while i < len(string):
         n = int(string[i])
-        if firstNum >= n :
-            list += 
-    
+        
+        # Proceeding num is greater, therefore add to list
+        if firstNum < n :
+            list += [n]
+            list.append(sub)
+        elif nLarge: 
+            sub.append(n)
+            
+        i += 1
+    print list
+    return list
     
     
 #testcases
