@@ -17,17 +17,18 @@ from twisted.python.zipstream import countFileChunks
 from Foundation import MAX
 
 def freq_analysis(message):
-    freq_list = countFreq()
+    maxLetters = 26 # 26 letters from a to z
+    freq_list = countFreq(maxLetters)
     freq_list = calcFreq(freq_list, message)
-    freq_list = normalize(freq_list, message)
+    freq_list = normalize(freq_list, message, maxLetters)
     return freq_list
 
 
-def countFreq():
+def countFreq(maxN):
     letters = []
     i = 0 # index to be incremented 
-    maxLetters = 26 # 26 letters from a to z
-    while i < maxLetters: 
+    
+    while i < maxN: 
         letters += [0]
         i += 1
         
@@ -39,88 +40,65 @@ def calcFreq(list, msg):
     for char in msg: 
         if char == 'a': 
             list[0] += 1 
-            break
         if char == 'b':
             list[1] += 1
-            break
         if char == 'c':
             list[2] += 1
-            break
         if char == 'd':
             list[3] += 1
-            break
         if char == 'e':
             list[4] += 1
-            break
         if char == 'f':
             list[5] += 1
-            break
         if char == 'g':
             list[6] += 1
-            break
         if char == 'h':
             list[7] += 1
-            break
         if char == 'i':
             list[8] += 1
-            break
         if char == 'j':
             list[9] += 1
-            break
         if char == 'k':
             list[10] += 1
-            break
         if char == 'l':
             list[11] += 1
-            break
         if char == 'm':
             list[12] += 1
-            break
         if char == 'n':
             list[13] += 1
-            break
         if char == 'o':
             list[14] += 1
-            break
         if char == 'p':
             list[15] += 1
-            break
         if char == 'q':
             list[16] += 1
-            break
         if char == 'r':
             list[17] += 1
-            break
         if char == 's':
             list[18] += 1
-            break
         if char == 't':
             list[19] += 1
-            break
         if char == 'u':
             list[20] += 1
-            break
         if char == 'v':
             list[21] += 1
-            break
         if char == 'w':
             list[22] += 1
-            break
         if char == 'x':
             list[23] += 1
-            break
         if char == 'y':
             list[24] += 1
-            break
         if char == 'z':
             list[25] += 1
         
     return list
 
-def normalize(list, msg):
+def normalize(list, msg, maxN):
     numChar = len(msg)
-    for letter in list: 
-        letter = letter / numChar
+    i = 0
+    while i < maxN:
+        list[i] = float(list[i]) / numChar
+        i += 1
     return list
 
 
