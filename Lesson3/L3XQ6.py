@@ -16,7 +16,7 @@ create empty list
 add first number to list
 check proceeding number
     if it's smaller than or equal to the first num:
-    then insert into it's own list
+    then insert into it's own sub list
     else if it's bigger than the first number:
     just add it to the list as usual
 next number: 
@@ -36,13 +36,20 @@ def numbers_in_lists(string):
     while i < len(string):
         n = int(string[i])
         
-        # Proceeding num is greater, therefore add to list
-        if firstNum < n :
-            list += [n]
-            list.append(sub)
-        elif nLarge: 
+        # Proceeding num is smaller or equal to first number in list 
+        # therefore add to list
+        if n <= firstNum:
             sub.append(n)
-            
+
+
+        else:
+            if sub:
+                list.append(sub)
+            else: 
+                list.append(n)
+            sub = []
+            firstNum = n 
+           
         i += 1
     print list
     return list
