@@ -10,6 +10,23 @@
 
 #Hint - "int()" turns a string's element into a number
 
+'''
+Pseudo code - brainstorm algorithm
+create empty list
+add first number to list
+check proceeding number
+    if it's smaller than or equal to the first num:
+    then insert into it's own list
+    else if it's bigger than the first number:
+    just add it to the list as usual
+next number: 
+    if smaller than or equal to the first num: 
+    insert into same list as sublist
+    else if it's bigger than first num: 
+    just add to list as usual, not into sublist
+continue until no more numbers
+'''
+
 def numbers_in_lists(string):
     firstNum = int(string[0])
     nLarge = True
