@@ -51,6 +51,7 @@ def numbers_in_lists(string):
             firstNum = n 
            
         i += 1
+    list += sub
     print list
     return list
     
