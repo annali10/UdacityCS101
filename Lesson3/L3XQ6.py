@@ -45,13 +45,14 @@ def numbers_in_lists(string):
         else:
             if sub:
                 list.append(sub)
+                list.append(n)
             else: 
                 list.append(n)
             sub = []
             firstNum = n 
            
         i += 1
-    list += sub
+    list.append(sub)
     print list
     return list
     
