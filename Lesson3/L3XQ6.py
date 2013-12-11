@@ -52,7 +52,8 @@ def numbers_in_lists(string):
             firstNum = n 
            
         i += 1
-    list.append(sub)
+    if sub:    
+        list.append(sub)
     print list
     return list
     
