@@ -5,7 +5,6 @@
 # for each i=0,1,...,n-1 and for each j=0,1,...,n-1.
 
 def antisymmetric(puzzle):
-    # num = len(puzzle) max times runs thru loops (num of items in one row)
     i = 0
     for row in puzzle: # one row in puzzle
         col = getCol(puzzle, i)

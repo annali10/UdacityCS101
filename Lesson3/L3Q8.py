@@ -28,6 +28,7 @@
 # You may assume the the input is square and contains at
 # least one row and column.
 
+
 correct = [[1,2,3],
            [2,3,1],
            [3,1,2]]
@@ -63,6 +64,8 @@ def check_sudoku(square):
     if checkAllRow(square, numOfDig, sum):
         if checkAllCol(square, numOfDig, sum):
             return True
+        else: 
+            return False
     else:
         return False    
     
@@ -136,7 +139,6 @@ def checkAllCol(square, numOfDig, sumAllDig):
     return True         
         
 
-
 print check_sudoku(correct)
 #>>> True
 
@@ -154,4 +156,3 @@ print check_sudoku(incorrect4)
 
 print check_sudoku(incorrect5)
 #>>> False
-
