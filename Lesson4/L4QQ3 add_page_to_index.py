@@ -24,7 +24,6 @@ def add_page_to_index(index,url,content):
     split_list = content.split()
     for word in split_list:
         add_to_index(index,word,url)
-    return index
 
 
 
